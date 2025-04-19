@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import LumeTales2 from "../pages/home/components/Lumetales2";
 import Scroll from "../pages/home/components/Scroll";
-import GridEdgeSection from "../pages/home/components/Content"; 
+import GridEdgeSection from "../pages/home/components/Content";
 
 export default function Home2() {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ export default function Home2() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative h-screen w-full overflow-hidden">
+      <div className="relative h-screen w-full overflow-hidden pt-24">
         {/* ✅ Spline Background Embed */}
         <iframe
           src="https://my.spline.design/retrofuturisticcircuitloop-c95ef23491a862fc7c1f67e0e07a0f43/"
@@ -22,7 +22,7 @@ export default function Home2() {
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-start h-full px-6 md:px-20 text-left">
           <motion.div
-            className="p-10   max-w-2xl "
+            className="p-10 max-w-2xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
@@ -46,22 +46,21 @@ export default function Home2() {
             </motion.p>
 
             <motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.97 }}
-  className="bg-white text-[#CD968B] px-6 py-2 rounded-full font-medium transition hover:bg-gray-100 shadow-md border border-[#CD968B]"
->
-  Know More
-</motion.button>
-
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-white text-[#CD968B] px-6 py-2 rounded-full font-medium transition hover:bg-gray-100 shadow-md border border-[#CD968B]"
+              onClick={() => navigate("/App-features")}
+            >
+              Know More
+            </motion.button>
           </motion.div>
         </div>
       </div>
+
+      {/* Content Sections */}
       <GridEdgeSection />
       <Scroll />
       <LumeTales2 />
-
-      {/* Footer Section */}
-      
     </>
   );
 }
