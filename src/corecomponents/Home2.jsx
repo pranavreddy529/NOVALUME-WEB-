@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import LumeTales2 from "../pages/home/components/LumeTales2";
+import LumeTales2 from "../pages/home/components/Lumetales2";
 import Scroll from "../pages/home/components/Scroll";
 import GridEdgeSection from "../pages/home/components/Content"; 
 

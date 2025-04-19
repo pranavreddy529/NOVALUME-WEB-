@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -11,7 +12,12 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-screen overflow-x-hidden">
+    <motion.div 
+      className="overflow-x-hidden"
+      initial={{opacity: 0, y: -10}}
+      animate={{opacity: 1, y: 0}}
+      transition={{duration: 1, ease: "easeInOut", delay: 2}}
+    >
       {/* Top Header: Toggle Left + Logo Center */}
       <div className="w-full flex items-center justify-between py-3 px-6 bg-white shadow-md">
         {/* Left: Toggle & Text */}
@@ -86,6 +92,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 }

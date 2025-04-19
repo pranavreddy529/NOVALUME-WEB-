@@ -15,6 +15,8 @@ import NovalumeParticleSystem from "./components/GrainBG";
 import CalendlyBookingComponent from "../../corecomponents/ContactUs";
 import { StatsContext } from "./context/StatsContext";
 import Triangles from "./components/Triangles";
+import BulbsBG from "./components/BulbsBG";
+
 
 export default function Home() {
 
@@ -25,23 +27,24 @@ export default function Home() {
   return (
     <>
     <div className="home">
-      <div className="flex items-center justify-center min-h-screen w-full p-6 bg-[#F5F1E6]">
+      <div className="flex items-center justify-center min-h-screen w-full p-6 bg-transparent">
         {/* <BulbAnimation /> */}
-        <NovalumeParticleSystem />
+        {/* <NovalumeParticleSystem /> */}
+        <BulbsBG />
         <motion.div 
-          className="max-w-3xl text-center z-10"
+          className="max-w-3xl text-center flex flex-col justify-center z-10 bg-[#ffffff15] p-7 rounded-xl backdrop-blur-xl"
           initial={{ opacity: 0, y: 50 }} 
           animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 2.5 }}
         >
           <h1 
-            className="text-4xl md:text-5xl font-bold text-[#675941]"
+            className="text-4xl md:text-5xl font-bold text-[#fff]"
           >
             Empowering smart energy, one choice at a time
           </h1>
 
           <motion.p 
-            className="text-lg md:text-xl mt-4 mb-6 text-[#675941]"
+            className="text-lg md:text-xl mt-4 mb-6 text-[#efef]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -55,13 +58,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
           >
-            <button
-              className="bg-[#EBA2A3] hover:bg-[#d88b8c] text-white font-medium py-2 px-6 rounded-full transition cursor-pointer"
-              onClick={()=> navigate("/product-purchase") }
-            >
+            <button className="bg-[#EBA2A3] hover:bg-[#d88b8c] text-white font-medium py-2 px-6 rounded-full transition">
               Shop
             </button>
-            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-6 rounded-full transition cursor-pointer">
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-6 rounded-full transition">
               Learn More
             </button>
           </motion.div>

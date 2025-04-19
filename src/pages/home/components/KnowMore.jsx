@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
 
+import productImg from '../../../assets/SmartPlug1000_1000_upscaled.png'
+
 export default function KnowMore() {
 
     const navigate = useNavigate()
@@ -44,7 +46,7 @@ export default function KnowMore() {
                     </div>
 
                     <div className="max-w-7xl mb-12 flex gap-20 items-center justify-center mb-32">
-                        <img className="w-1/2" src="https://placehold.co/600x400" alt="" />
+                        <img className="w-1/2 cursor-pointer hover:scale-[1.1] hover:drop-shadow-[0_0_15px_#EBA3A4] transition duration-300 " src={productImg} alt="" />
                         <div className="features-list">
                             <h2 className="text-4xl font-bold mb-6 text-[#675941]">
                                 Why Choose Novalume?
