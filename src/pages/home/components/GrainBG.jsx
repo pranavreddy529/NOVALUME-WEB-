@@ -34,7 +34,7 @@ const NovalumeParticleSystem = () => {
 
     // Create particles
     const createParticles = (width, height) => {
-      const particleCount = Math.floor(width / 10);
+      const particleCount = Math.floor(width);
       return Array.from({ length: particleCount }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -123,8 +123,8 @@ const NovalumeParticleSystem = () => {
 
     // Setup event listeners and start animation
     window.addEventListener('resize', resizeCanvas);
-    canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('mouseleave', handleMouseLeave);
+    // canvas.addEventListener('mousemove', handleMouseMove);
+    // canvas.addEventListener('mouseleave', handleMouseLeave);
 
     // Initial setup
     resizeCanvas();
@@ -139,29 +139,13 @@ const NovalumeParticleSystem = () => {
     };
   }, []);
 
-  // Grain effect using inline styles
-  const grainStyle = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '100vh',
-    pointerEvents: 'none',
-    backgroundImage: `
-      linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), 
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")
-    `,
-    opacity: 0.05,
-    zIndex: 2
-  };
 
   return (
-    <div className="absolute w-full h-screen overflow-hidden">
+    <div className="absolute top-0 w-full h-[100%] overflow-hidden">
       <canvas 
         ref={canvasRef} 
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute top-0 left-0 w-full z-10"
       />
-      <div style={grainStyle} />
     </div>
   );
 };

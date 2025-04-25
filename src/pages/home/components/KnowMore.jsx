@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; 
 
 import productImg from '../../../assets/SmartPlug1000_1000_upscaled.png'
+import screenshotVideo from '../../../assets/screenshots2.mp4'
 
 export default function KnowMore() {
 
@@ -42,7 +43,8 @@ export default function KnowMore() {
                                 Get a Tech Breakdown
                             </button>
                         </div>
-                        <img className="w-1/2" src="https://placehold.co/600x400" alt="" />
+                        {/* <img className="w-1/2" src="https://placehold.co/600x400" alt="" /> */}
+                        <video autoPlay muted loop playsInline className="w-1/2 rounded-xl" src={screenshotVideo}></video>
                     </div>
 
                     <div className="max-w-7xl mb-12 flex gap-20 items-center justify-center mb-32">

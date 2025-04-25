@@ -1,6 +1,11 @@
+import NovalumeParticleSystem from "../pages/home/components/GrainBG"
+import AnimatedWaves from "./AnimatedWaves"
+
 export default function Footer(){
     return (
         <footer className="bg-white py-12 border-t border-gray-300 relative z-10">
+            {/* <NovalumeParticleSystem /> */}
+            <AnimatedWaves />
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-800">
                 <div>
                     <h3 className="text-lg font-semibold mb-3">Company</h3>

@@ -11,11 +11,9 @@ import ProductFeatures from "./components/ProductFeatures";
 import Companies from "./components/Companies";
 import FAQs from "./components/FAQs";
 import KnowMore from "./components/KnowMore";
-import NovalumeParticleSystem from "./components/GrainBG";
 import CalendlyBookingComponent from "../../corecomponents/ContactUs";
 import { StatsContext } from "./context/StatsContext";
-import Triangles from "./components/Triangles";
-import BulbsBG from "./components/BulbsBG";
+import VideoBG from "./components/VideoBG";
 
 
 export default function Home() {
@@ -28,9 +26,7 @@ export default function Home() {
     <>
     <div className="home">
       <div className="flex items-center justify-center min-h-screen w-full p-6 bg-transparent">
-        {/* <BulbAnimation /> */}
-        {/* <NovalumeParticleSystem /> */}
-        <BulbsBG />
+        <VideoBG />
         <motion.div 
           className="max-w-3xl text-center flex flex-col justify-center z-10 bg-[#ffffff15] p-7 rounded-xl backdrop-blur-xl"
           initial={{ opacity: 0, y: 50 }} 
@@ -68,7 +64,6 @@ export default function Home() {
         </motion.div>
       </div>
       <div className="relative">
-        {/* <Triangles /> */}
         <div className="flex flex-col items-center justify-center min-h-screen p-6 md:p-12">
           <AnimatePresence mode="wait">
             {

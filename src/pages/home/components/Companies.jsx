@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import NovalumeParticleSystem from './GrainBG'
 
 export default function MarqueeSection() {
   const logos = [
@@ -12,6 +13,7 @@ export default function MarqueeSection() {
 
   return (
     <div className="overflow-hidden py-12 bg-white px-6 lg:px-20">
+      {/* <NovalumeParticleSystem /> */}
       {/* Heading aligned left */}
       <div className="mb-8 text-left">
         <h2 className="text-4xl font-bold text-gray-900 uppercase tracking-wide mb-2">
