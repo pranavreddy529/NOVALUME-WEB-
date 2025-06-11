@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Logo from '../assets/NovalumeLogo.png'
+import bulbImg from '../assets/bulb.png'
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -16,10 +18,16 @@ export default function Navbar() {
 
         
         <div className="flex items-center gap-8">
-        
-          <div className="flex items-center text-2xl font-bold text-white" >
-            <span>Novalume</span>
-           
+          <div className="flex items-center" >
+          <span 
+              className="font-thin text-4xl tracking-widest bg-gradient-to-r from-red-400 to-yellow-900 text-transparent bg-clip-text">
+              N
+            </span>
+            <img src={bulbImg} alt="Novalume Bulb" className="w-[50px] mt-[-3px] mx-[-4px]"/>
+            <span 
+              className="font-thin text-4xl tracking-widest bg-gradient-to-r from-red-400 to-yellow-900 text-transparent bg-clip-text">
+              VALUME
+            </span>
           </div>
 
           
